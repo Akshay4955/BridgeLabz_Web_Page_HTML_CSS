@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo - Web Page Layout</title>
+    <style>
+      body { padding: 2em; }
+
+      .headerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: tomato;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .footerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: lightgreen;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .mainContainer {
+        display: flex;
+        flex-flow: row wrap;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .mainContentItem {
+        text-align: left;
+        background: deepskyblue;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      .sideBarLeftItem { background: gold; }
+      .sideBarRightItem { background: hotpink; }
+
+      .sideBarItem { flex: 1 0 0; border: 0px solid green; }
+      .mainContentItem { flex: 3 0px; }
+      .sideBarLeftItem { order: 1; }
+      .mainContentItem { order: 2; }
+      .sideBarRightItem { order: 3; }
+    </style>
+  </head>
+  <body>
+    <header class="headerContainer"><h1>Header - Web Page Layout Example</h1></header>
+    <div class="mainContainer">
+      <section class="mainContentItem">
+        <article>
+          <h2>First Article</h2>
+          <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to 
+            be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets
+             (CSS) and scripting languages such as JavaScript.</p>
+        </article>
+        <article>
+          <h2>Second Article</h2>
+          <p>Web browsers receive HTML documents from a web server or from local storage and render the documents
+             into multimedia web pages. HTML describes the structure of a web page semantically and originally 
+             included cues for its appearance.</p>
+        </article>
+        <article>
+          <h2>Third Article</h2>
+          <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects
+             such as interactive forms may be embedded into the rendered page. HTML provides a means to create 
+             structured documents by denoting structural semantics for text such as headings, paragraphs, lists,
+              links, quotes, and other items.</p>
+        </article>
+      </section>
+      <sidebar class="sideBarItem sideBarLeftItem">Left Side Bar</sidebar>
+      <sidebar class="sideBarItem sideBarRightItem">Right Side Bar</sidebar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+  </body>
+</html>
